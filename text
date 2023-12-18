@@ -1,2 +1,50 @@
 Break the Sequential Dependency of LLM Inference Using Lookahead Decoding
 https://lmsys.org/blog/2023-11-21-lookahead-decoding/?continueFlag=a88848711e1cc65fc7bc23868fcb93a3
+
+Layer Normalization (LayerNorm) 是一种常见的神经网络层，用于训练深度学习模型。它的主要作用是规范化神经网络的激活值，有助于提高模型的训练效率和稳定性。
+在 C++ 中，可以通过实现 LayerNorm 层来进行 CPU 上的计算。以下是一个简单的示例代码，演示了如何在 C++ 中实现 LayerNorm 层：
+```cpp
+#include <vector>
+#include <cmath>
+// LayerNorm 层类
+class LayerNorm {
+public:
+    LayerNorm(int feature_size, float eps)
+        : feature_size_(feature_size), eps_(eps) {
+        // 初始化 gamma 和 beta 的值
+        gamma_ = std::ones<float>(feature_size_);
+        beta_ = std::zeros<float>(feature_size_);
+    }
+    // 对输入数据进行 LayerNorm 处理
+    void forward(const std::vector<float>& x, std::vector<float>& y) {
+        const int batch_size = x.size() / feature_size_;
+        const float mean = 0.0;
+        const float var = 1.0;
+        std::vector<float> mean_buf(batch_size), var_buf(batch_size);
+        // 计算每个样本的均值和方差
+        for (int i = 0; i < batch_size; ++i) {
+            for (int j = 0; j < feature_size_; ++j) {
+                mean_buf[i] += x[i * feature_size_ + j] / feature_size_;
+                var_buf[i] += x[i * feature_size_ + j] * x[i * feature_size_ + j] / feature_size_;
+            }
+        }
+        // 计算 gamma 和 beta 值
+        for (int i = 0; i < feature_size_; ++i) {
+            gamma_[i] = 1.0 / std::sqrt(var_buf[i] + eps_);
+            beta_[i] = mean_buf[i] * gamma_[i];
+        }
+        // 对输入数据进行规范化处理
+        for (int i = 0; i < batch_size; ++i) {
+            for (int j = 0; j < feature_size_; ++j) {
+                y[i * feature_size_ + j] = (x[i * feature_size_ + j] - mean_buf[i]) * gamma_[j] + beta_[j];
+            }
+        }
+    }
+private:
+    int feature_size_; // 特征大小
+    float eps_; // 防止除以零的参数
+    std::vector<float> gamma_; // gamma 值
+    std::vector<float> beta_; // beta 值
+};
+```
+在上述代码中，我们定义了一个 `LayerNorm` 类，它包含一个构造函数和一个 `forward` 方法。构造函数用于初始化 gamma 和 beta 的值，`forward` 方法则用于对输入数据进行 LayerNorm 处理。在 `forward` 方法中，我们首先计算每个样本的均值和方差，然后根据公式计算 gamma 和 beta 值，最后对输入数据进行规范化处理。
