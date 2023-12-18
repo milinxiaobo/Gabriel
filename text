@@ -1,5 +1,6 @@
 Break the Sequential Dependency of LLM Inference Using Lookahead Decoding
 https://lmsys.org/blog/2023-11-21-lookahead-decoding/?continueFlag=a88848711e1cc65fc7bc23868fcb93a3
+https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main
 
 Layer Normalization (LayerNorm) 是一种常见的神经网络层，用于训练深度学习模型。它的主要作用是规范化神经网络的激活值，有助于提高模型的训练效率和稳定性。
 在 C++ 中，可以通过实现 LayerNorm 层来进行 CPU 上的计算。以下是一个简单的示例代码，演示了如何在 C++ 中实现 LayerNorm 层：
