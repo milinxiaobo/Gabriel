@@ -1,0 +1,24 @@
+#transformer#
+O[sq, b,  h]       <=  F[sq, b, h] * W[h,  h]  ;; Q
+O[sq, b, 2h]       <=  F[sq, b, h] * W[h, 2h]  ;; KV
+O[sq, b, np, hn]   <=  O[sq, b, h]             ;; reshape
+--
+#attn#
+O[sq, b*np, hn]    <=  O[sq, b, np, hn]
+O[sk, b*np, hn]    <=  O[sk, b, np, hn]
+O[sv, b*np, hn]    <=  O[sv, b, np, hn]
+
+BMM[b*np, sq, sk]  <=  Q[b*np, sq, hn] * K[b*np, sk, hn]
+BMM[b*np, sq, hn]  <= QK[b*np, sq, sk] * V[b*np, sk, hn]
+
+O[b, np, sq, hn]   <=  O[b*np,  sq, hn]
+O[sq, b, np, hn]   <=  O[b, np, sq, hn]
+O[sq, b, hp]       <=  O[sq, b, np, hn]
+--
+#dense#
+O[sq, b, h]        <=  F[sq, b, h]     * W[h, h] ;; dense
+--
+#mlp#
+O[sq, b, ffn-h]    <=  F[sq, b, h]     * W[h, ffn-h]
+O[s, b, h]         <=  F[sq, b, ffn-h] * W[ffn-h, h]
+--
