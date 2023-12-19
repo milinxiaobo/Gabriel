@@ -2,6 +2,8 @@ Break the Sequential Dependency of LLM Inference Using Lookahead Decoding
 https://lmsys.org/blog/2023-11-21-lookahead-decoding/?continueFlag=a88848711e1cc65fc7bc23868fcb93a3
 https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main
 
+Arcadia: An end-to-end AI system performance simulator
+
 
 Unified Programming Models for Heterogeneous High-Performance Computers.
 BladeDISC: Optimizing Dynamic Shape Machine Learning Workloads via Compiler Approach
