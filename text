@@ -4,9 +4,9 @@ https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main
 
 Arcadia: An end-to-end AI system performance simulator
 
-Automated Tensor Model Parallelism with Overlapped
-Communication for Efficient Foundation Model
-Training
+Automated Tensor Model Parallelism with Overlapped Communication for Efficient Foundation Model Training
+
+https://leiblog.wang/a-hgemm-tvm-schedule/
 
 
 Unified Programming Models for Heterogeneous High-Performance Computers.
