@@ -4,6 +4,10 @@ https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main
 
 Arcadia: An end-to-end AI system performance simulator
 
+Automated Tensor Model Parallelism with Overlapped
+Communication for Efficient Foundation Model
+Training
+
 
 Unified Programming Models for Heterogeneous High-Performance Computers.
 BladeDISC: Optimizing Dynamic Shape Machine Learning Workloads via Compiler Approach
