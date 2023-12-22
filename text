@@ -9,6 +9,18 @@ Automated Tensor Model Parallelism with Overlapped Communication for Efficient F
 https://leiblog.wang/a-hgemm-tvm-schedule/
 
 
+AITemplate                FlexGen                   buddy-mlir                llvm-project              transformers
+Awesome-LLM-Inference     LoRA                      cuda-samples              mlc-llm                   triton
+ChezScheme                Medusa                    cutlass                   oneflow                   tutel
+ColossalAI                Megatron-LM               dist-ir                   optimum                   tvm
+DeepSpeed                 Paddle                    fairscale                 pytorch                   vllm
+DeepSpeed-MII             PyProf                    flash-attention           pytorch-generate          xformers
+DeepSpeedExamples         TensorRT-LLM              gpu_poor                  ray
+EnergonAI                 accelerate                iree                      rmm
+FastChat                  alpa                      jax                       tensorflow
+FasterTransformer         astra-sim                 lightllm                  text-generation-inference
+
+
 Unified Programming Models for Heterogeneous High-Performance Computers.
 BladeDISC: Optimizing Dynamic Shape Machine Learning Workloads via Compiler Approach
 PowerFusion: A Tensor Compiler with Explicit Data Movement Description and Instruction-level Graph IR
