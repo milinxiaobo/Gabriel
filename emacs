@@ -55,6 +55,10 @@ Type C-h C-o for information on getting the latest version.
 (set-frame-font "Menlo 18" nil t)
 
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(width  . 60))
+(add-to-list 'default-frame-alist '(height . 20))
+;; (add-to-list 'default-frame-alist '(font . "Monospace-10"))
 
 (setq org-support-shift-select 'always)
 
