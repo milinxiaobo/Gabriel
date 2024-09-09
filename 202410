@@ -1,0 +1,10 @@
+-                  PatrickStar        depyf             long-context-attention  ray-llm
+DeepSpeed          S-LoRA             fairseq           marlin                  stablediffusion
+DeepSpeed-MII      TensorRT-LLM       fastmoe           milvus                  tigerbeetle
+DeepSpeedExamples  TransformerEngine  flash-attention   mlc-llm                 transformers
+DistServe          alpa               flashinfer        nccl                    triton
+FasterTransformer  apex               hpc_results_v3.0  nccl-tests              triton-fused-mlp
+FlexFlow           birdwatcher        iree              nvbench                 tvm
+LLM-Viewer         buddy-mlir         knowhere          pymilvus                vllm
+Megatron-LM        cpp-learning       llama.cpp         pytorch
+Nanoflow           cutlass            llvm-project      ray
