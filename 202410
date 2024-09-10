@@ -9,6 +9,11 @@ LLM-Viewer         buddy-mlir         knowhere          pymilvus                
 Megatron-LM        cpp-learning       llama.cpp         pytorch
 Nanoflow           cutlass            llvm-project      ray
 
+
+AI-System             ZLUDA                 cuda_learn            leetcode
+Awesome-LLM-Inference awesome-leetcode      gensrc
+Efficient-LLMs-Survey code                  gensrc.tar.gz
+
 {
     "chat.editor.fontSize": 24,
     "debug.console.fontSize": 24,
