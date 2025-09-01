@@ -4,3 +4,7 @@ select(dim,index) is equivalent to slicing. For example, tensor.select(0, index)
 第0维（16）：样本维度（16个句子）。
 第1维（50）：序列维度/时间步维度（句子中单词的位置，可以看作是特征结构的一部分）。
 第2维（300）：特征维度（每个单词的嵌入向量表示，300个特征值）。对于循环神经网络（RNN/LSTM），模型会在第1维（50）上逐步处理。
+
+
+https://nvidia.github.io/TensorRT-LLM/index.html
+
