@@ -8,3 +8,5 @@ select(dim,index) is equivalent to slicing. For example, tensor.select(0, index)
 
 https://nvidia.github.io/TensorRT-LLM/index.html
 
+Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture
+
